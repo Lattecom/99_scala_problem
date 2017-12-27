@@ -7,5 +7,5 @@ object P01 {
 
   // foldLeft version
   def last_[A](la: List[A]): A = 
-    la.foldRight(la.head)((acc, a) => if (a == la.head) acc else a)
+    la.foldLeft(la.head)((acc, a) => if (a == la.head) acc else a)
 }
