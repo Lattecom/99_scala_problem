@@ -1,9 +1,6 @@
 /*
 # P14 (\*) Duplicate the elements of a list.
 
-Implement the so-called run-length encoding data compression method directly.
-I.e. don't use other methods you've written (like P09's pack); do all the work directly.
-
 Example:
 ``` scala
 scala> duplicate(List('a, 'b, 'c, 'c, 'd))
@@ -16,5 +13,5 @@ object P14 {
     l.flatMap(a => List(a,a))
 
   def duplicateViaFoldRight[A](l: List[A]): List[A] = 
-    l.foldRight(List[A].empty())((a, z) => List(a,a) ::: z)
+    l.foldRight(List(): List[A])((a, z) => List(a,a) ::: z)
 }
